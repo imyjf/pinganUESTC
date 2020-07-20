@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://fleeuestc.numbguy.top/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>平安成电智慧通行</title>
+<link id="noteanywherecss" media="screen" type="text/css" rel="stylesheet" href="data:text/css,.note-anywhere%20.closebutton%7Bbackground-image%3A%20url%28chrome-extension%3A//bohahkiiknkelflnjjlipnaeapefmjbh/asset/deleteButton.png%29%3B%7D%0A"></head>
+
+
+<body style="">
+  <!--index.wxml-->
+  <!-- <input type="text" value="1017594942@qq.com" />
+  <button onclick="disableElement()">禁用</button>
+  <button onclick="radiochange()">test</button> -->
+
+  
+  <div class="outer">
+    <div class="container">
+      <div>
+        <div class="info">
+          <div class="custom-name">
+            <label>我是谁</label>
+            <input type="text" oninput="namechange()" id="custom-name-input" class="custom-name-input">
+          </div>
+          
+          <!--<div class="io">-->
+          <!--  <td>-->
+
+          <!--    <input name="io" value="1" type="radio" οnclick="radiochange()">-->
+          <!--    <label>我从哪里来</label><br>-->
+          <!--    <input name="io" value="0" type="radio" οnclick="radiochange()">-->
+          <!--    <label for="sex">我要到哪里去</label><br>-->
+
+          <!--  </td>-->
+          <!--</div>-->
+
+          <button id="infoselected">确认</button>
+        </div>
+      </div>
+
+
+      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+      获取头像昵称 
+      </button> -->
+      <block>
+        <div class="usermotto">
+          <!-- <text class="user-motto">{{motto}}</text> -->
+          <text class="auth" id="auth">授权有效！</text>
+        </div>
+        <!-- <div class="divLine"></div> -->
+        <hr align="center" color="#E0E3DA" size="0.5" data-darkreader-inline-color="" style="--darkreader-inline-color:#e5d6bb;">
+
+        <div class="table">
+          <block>
+            <div class="tr">
+              <div class="td-left">
+                <div class="icon">
+                  <img src="./平安成电智慧通行_files/user.png" mode="aspectFill"> 
+                </div>
+              </div>
+              <div class="td-mid">
+                <div class="user-left">用户姓名</div>
+              </div>
+              <div class="td-right">
+                <div id="user-right" class="user-right">UESTCer</div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td-left">
+                <div class="icon">
+                  <img src="./平安成电智慧通行_files/register.png" mode="aspectFill"> 
+                </div>
+              </div>
+              <div class="td-mid">
+                <div class="register-left">登记类型</div>
+              </div>
+              <div class="td-right">
+                <div class="register-right">研究生（博士）</div>
+              </div>
+            </div>
+            <div class="tr">
+              <div class="td-left">
+                <div class="icon">
+                  <img src="./平安成电智慧通行_files/time.png" mode="aspectFill"> 
+                </div>
+              </div>
+              <div class="td-mid">
+                <div class="time-left">登记时间</div>
+              </div>
+              <!-- <div class="td-right"><div class="time-right">{{text}}</div></div> -->
+              <div class="td-right">
+                <!-- <div class="scrolltxt">
+                  <div class="marquee_box">
+                    <div class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+                      <text>{{text}}</text>
+                      <text style="margin-right:{{marquee_margin}}px;"></text>
+                      <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>
+                    </div>
+                  </div>
+                </div> -->
+                <marquee>
+                  <div id="time" style="font-weight: bolder; font-size: 20px; color: rgb(9, 176, 148); --darkreader-inline-color:#77806e;" behavior="scroll" data-darkreader-inline-color="">
+                    蒙多想去哪儿就去哪儿！</div>
+                </marquee>
+              </div>  
+            </div>          
+          </block>          
+        </div> 
+        <center>
+        <div class = "button">
+                <div class="erweima">前往个人二维码
+                </div>
+       </div>
+       <center>
+        
+      </block>
+      
+       
+      
+    </div>
+  </div>
+
+
+<script src="./平安成电智慧通行_files/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="utils/util.js"></script> -->
+<script type="text/javascript" src="./平安成电智慧通行_files/index.js"></script>
+
+<style>
+  /**index.wxss**/
+  .custom-name {
+    display: flex;
+  }
+
+  .custom-name-input {
+    background-color: teal;
+  }
+
+  .userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+  }
+
+  .userinfo-nickname {
+    color: #aaa;
+  }
+
+  .usermotto {
+    /* flex: center; */
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 22px;
+
+  }
+
+  .auth {
+    color: #008900;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .divLine {
+    background: #E0E3DA;
+    width: 100%;
+    height: 3rpx;
+  }
+
+  .icon {
+    /* display:flex;  */
+    /* display: contents;                   */
+    justify-content: center;
+    /* flex-grow: 1; */
+
+    /* margin-left: 5px; */
+  }
+
+  .icon image {
+    width: 25px;
+    height: 25px;
+  }
+
+  .user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+  }
+
+  .user-left {
+    font-family: "黑体";
+    color: #000;
+    font-size: 40rpx;
+    flex-grow: 2;
+
+
+  }
+
+  .user-right {
+    font-family: "黑体";
+    color: #000;
+    font-size: 25px;
+    align-items: right;
+    font-weight: 900;
+    flex-grow: 3;
+    margin-right: 10px;
+  }
+
+  .register {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+  }
+
+  .register-left {
+    font-family: "黑体";
+    color: #000;
+    font-size: 40rpx;
+  }
+
+  .register-right {
+    font-family: "黑体";
+    color: #000;
+    font-size: 25px;
+    align-items: right;
+    font-weight: 900;
+  }
+
+  .time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  .time-left {
+    font-family: "黑体";
+    color: #000;
+    font-size: 40rpx;
+
+  }
+
+  .time-right {
+    font-family: "黑体";
+    color: #09B094;
+    /* font-size: 60rpx; */
+    align-items: right;
+    font-weight: bold;
+  }
+
+
+   .button {
+  	background-color: #09B094; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 16px;
+    border-radius:4px;
+    /*position: relative;*/
+   align-items: center;
+   
+   display:inline-block;margin:0 auto
+  }
+.erweima{
+	
+	font-family: "宋体";
+    /*color: #09B094;*/
+   color: #FFFFFF;
+    /* font-size: 60rpx; */
+    align-items: center;
+   /* font-weight: bold;*/
+    justify-content: center;
+    margin: auto;
+    text-align:center
+}
+  /* 09B094 */
+
+
+
+
+  /*table*/
+  .table {
+    width: 100%;
+    border: 0px solid darkgray;
+  }
+
+  .tr {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+  }
+
+  .td-left {
+    width: 5%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .td-mid {
+    width: 35%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .td-right {
+    width: 60%;
+    justify-content: center;
+    text-align: right;
+  }
+
+
+
+  .scrolltxt {
+    padding: 0 20rpx;
+    background: transparent;
+  }
+
+  .marquee_box {
+    position: relative;
+    font-size: 80rpx;
+    color: #09B094;
+    font-weight: bold;
+    height: 90rpx;
+    display: block;
+    overflow: hidden;
+  }
+
+  .marquee_text {
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    height: 90rpx;
+    line-height: 90rpx;
+  }
+  
+
+</style>
+
+</body></html>
