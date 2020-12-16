@@ -44,9 +44,13 @@
       获取头像昵称 
       </button> -->
       <block>
-      	<div class="authorization">
-      		<div class="youxiao">研究生用户，入校授权有效！</div>
-      		<div class="guangbi">关闭</div>
+      	<div class="table1">
+      		<div class="table1-left">
+      			<div class="authorization">研究生用户，入校授权有效！</div>
+      		</div>
+      		<div class="table1-right">
+      			<div class="guangbi">关闭</div>
+      		</div>
       	</div>
         <div class="usermotto">
           <!-- <text class="user-motto">{{motto}}</text> -->
@@ -165,7 +169,7 @@
 
   .usermotto {
     /* flex: center; */
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 40px;
     font-size: 22px;
 
@@ -307,46 +311,17 @@
 	
 	.authorization {
   	background-color: #000000; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    text-align: initial;
-    text-decoration: none;
-    /*display: inline-block;*/
+    /*border: none;*/
+    color: #FFFFFF;
     font-size: 10px;
-    width: 100%;
-    /*border-radius:4px;*/
-    /*position: relative;*/
-   /*align-items: center;*/
-   
-   display:inline-block;
-   /*margin:0 auto*/
   }
   
-  .youxiao{
-  	/*font-family: "宋体";*/
-    /*color: #09B094;*/
-   	color: #FFFFFF;
-    /* font-size: 60rpx; */
-    /*align-items: center;*/
-   	/* font-weight: bold;*/
-    /*justify-content: center;*/
-    /*margin: auto;*/
-    float: left;
-    /*text-align:left*/
-  }
   
   .guangbi{
-  		/*font-family: "宋体";*/
-    /*color: #09B094;*/
-   	color: #09B094;
-    /* font-size: 60rpx; */
-    /*align-items: center;*/
-   	/* font-weight: bold;*/
-    /*justify-content: center;*/
-   	float: right;
-    /*margin: auto;*/
-    /*text-align:right*/
+  	/*background-color: #000000;  Green*/ 
+    /*border: none;*/
+    color: #09B094;
+    font-size: 10px;
   }
   
   
@@ -354,6 +329,25 @@
 
 
   /*table*/
+ 	.table1{
+ 		width: 100%;
+    /*border: 0px solid #000000;*/
+   background-color: #000000;
+    width: 100%;
+    display: flex;
+    padding: 10px 15px;
+ 	}
+ 	
+ 	.table1-left{
+ 		width:95%;
+ 		
+ 	}
+ 	
+ 	.table1-right{
+ 		width:5%;
+ 		
+ 	}
+ 	
   .table {
     width: 100%;
     border: 0px solid darkgray;
