@@ -44,6 +44,10 @@
       获取头像昵称 
       </button> -->
       <block>
+      	<div class="authorization">
+      		<div class="youxiao">研究生用户，入校授权有效！</div>
+      		<div class="guangbi">关闭</div>
+      	</div>
         <div class="usermotto">
           <!-- <text class="user-motto">{{motto}}</text> -->
           <text class="auth" id="auth">研究生用户，入校授权有效！</text>
@@ -170,7 +174,7 @@
   .auth {
     color: #008900;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22 px;
     text-align: center;
   }
 
@@ -269,24 +273,26 @@
   }
 
 
-   .button {
+  .button {
   	background-color: #09B094; /* Green */
     border: none;
     color: white;
-    padding: 10px 15px;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     /*display: inline-block;*/
-    font-size: 16px;
+    font-size: 15px;
     border-radius:4px;
     /*position: relative;*/
    align-items: center;
    
    display:inline-block;margin:0 auto
   }
-.erweima{
+  
+  
+	.erweima{
 	
-	font-family: "宋体";
+	/*font-family: "宋体";*/
     /*color: #09B094;*/
    color: #FFFFFF;
     /* font-size: 60rpx; */
@@ -294,10 +300,56 @@
    /* font-weight: bold;*/
     justify-content: center;
     margin: auto;
-    text-align:center
+    text-align:center;
+    font-size: 9px;
 }
   /* 09B094 */
-
+	
+	.authorization {
+  	background-color: #000000; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: initial;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 9px;
+    width: 100%;
+    /*border-radius:4px;*/
+    /*position: relative;*/
+   /*align-items: center;*/
+   
+   display:inline-block;
+   /*margin:0 auto*/
+  }
+  
+  .youxiao{
+  	/*font-family: "宋体";*/
+    /*color: #09B094;*/
+   	color: #FFFFFF;
+    /* font-size: 60rpx; */
+    /*align-items: center;*/
+   	/* font-weight: bold;*/
+    /*justify-content: center;*/
+    /*margin: auto;*/
+    float: left;
+    /*text-align:left*/
+  }
+  
+  .guangbi{
+  		/*font-family: "宋体";*/
+    /*color: #09B094;*/
+   	color: #09B094;
+    /* font-size: 60rpx; */
+    /*align-items: center;*/
+   	/* font-weight: bold;*/
+    /*justify-content: center;*/
+   	float: right;
+    /*margin: auto;*/
+    /*text-align:right*/
+  }
+  
+  
 
 
 
