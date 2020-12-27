@@ -14,7 +14,15 @@
   <button onclick="disableElement()">禁用</button>
   <button onclick="radiochange()">test</button> -->
 
-  
+  <!-- <div left:0px right:0px margin:0px>试一下</div> -->
+  <div class="table1">
+  	<div class="table1-left">
+  		<div class="authorization">研究生用户，入校授权有效！</div>
+  	</div>
+  	<div class="table1-right">
+  		<div class="guangbi">关闭</div>
+  	</div>
+  </div>
   <div class="outer">
     <div class="container">
       <div>
@@ -43,15 +51,11 @@
       <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
       获取头像昵称 
       </button> -->
+	  
+
+	  
       <block>
-      	<div class="table1">
-      		<div class="table1-left">
-      			<div class="authorization">研究生用户，入校授权有效！</div>
-      		</div>
-      		<div class="table1-right">
-      			<div class="guangbi">关闭</div>
-      		</div>
-      	</div>
+      	
         <div class="usermotto">
           <!-- <text class="user-motto">{{motto}}</text> -->
           <text class="auth" id="auth">研究生用户，入校授权有效！</text>
@@ -141,7 +145,13 @@
 <script type="text/javascript" src="./平安成电智慧通行_files/index.js"></script>
 
 <style>
+	body{
+		margin: 0px;
+	}
   /**index.wxss**/
+  .outer{
+	  margin:8px;
+  }
   .custom-name {
     display: flex;
   }
@@ -337,10 +347,11 @@
     display: flex;
     padding: 10px 15px;
     justify-content: center;
+	margin: 0px 0px 0px 0px;
  	}
  	
  	.table1-left{
- 		width:90%;
+ 		width:82%;
  		justify-content: center;
  		text-align: left;
  		display: block;
@@ -348,7 +359,7 @@
  	}
  	
  	.table1-right{
- 		width:10%;
+ 		width:18%;
  		justify-content: center;
  		text-align: left;
  		display: block;
